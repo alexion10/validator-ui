@@ -50,34 +50,6 @@ const firme = [
 export default function Homepage() {
   return (
     <>
-      <Header
-        links={[
-          {
-            name: "Joburi",
-            url: "#",
-          },
-          {
-            name: "Companii",
-            url: "#",
-          },
-          {
-            name: "Cautare",
-            url: "#",
-          },
-          {
-            name: "Despre",
-            url: "#",
-          },
-          {
-            name: "Contact",
-            url: "#",
-          },
-          {
-            name: "Documentatie",
-            url: "#",
-          },
-        ]}
-      />
       <div className="h-screen m-10">
         <div className="flex justify-between flex-wrap">
           <div>
@@ -102,7 +74,7 @@ export default function Homepage() {
 
         <div className="flex flex-wrap gap-4 gap-y-10 mt-10 justify-center md:justify-normal">
           {firme.map((item) => (
-            <HomeCards data={item} />
+            <HomeCards key={item.id} data={item} />
           ))}
         </div>
       </div>

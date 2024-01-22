@@ -2,6 +2,7 @@ import React from "react";
 import { useId } from "react";
 
 import logo from "../../assets/svgs/logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
   const anchorId = useId();
@@ -63,12 +64,12 @@ export default function Header(props) {
         <div className="hidden lg:flex items-center justify-end h-full lg:grow">
           <div className="flex-1 flex items-center">
             <div className="flex-1 flex justify-center">{links}</div>
-            <a
+            <Link
               className="text-base font-medium hover:text-bg-primary pr-4 pl-4 text-center lg:block hidden"
-              href="#"
+              to="/profile"
             >
               Profilul Meu
-            </a>
+            </Link>
           </div>
         </div>
         <a
