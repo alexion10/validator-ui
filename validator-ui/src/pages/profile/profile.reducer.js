@@ -24,7 +24,6 @@ export const getAllJobs = createAsyncThunk(
 const initialState = {
   allJobs: [],
   loading: false,
-  isSucces: false,
   error: null,
   isError: false,
 };
@@ -41,17 +40,14 @@ const profileReducer = createSlice({
     builder
       .addCase(getAllJobs.pending, (state) => {
         state.loading = true;
-        state.isSucces = false;
       })
       .addCase(getAllJobs.fulfilled, (state, action) => {
         state.loading = false;
-        state.isSucces = true;
         state.isError = false;
         state.allJobs = action.payload;
       })
       .addCase(getAllJobs.rejected, (state, action) => {
         state.loading = false;
-        state.isSucces = false;
         state.error = action.payload;
         state.isError = true;
         state.allJobs = [];
