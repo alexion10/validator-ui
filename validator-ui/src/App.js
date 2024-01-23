@@ -4,7 +4,7 @@ import "./App.css";
 import React from "react";
 import Header from "./components/header/header";
 import Homepage from "./pages/homepage";
-import Profile from "./pages/profile/profile";
+import Profile from "./pages/profile/Profile";
 
 function App() {
 	return (
